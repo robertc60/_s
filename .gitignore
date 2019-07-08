@@ -1,1 +1,2 @@
-gulp-dev
+#ignore gulp file
+/wp-content/themes/gulp-dev
