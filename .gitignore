@@ -1,2 +1,3 @@
 #ignore gulp file
-/wp-content/themes/gulp-dev
+wp-content/themes/gulp-dev
+wp-content/themes/node_modules
