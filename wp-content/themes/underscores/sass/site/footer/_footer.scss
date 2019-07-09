@@ -4,9 +4,31 @@
 	font-family: $font__sans;
 	color: #fff;
 	background-color: $color__skin;
-	display: flex;
+	text-align: center;
 
 
+	@media screen and (min-width: $query__small) {
+		padding: 1em 2em;
+	}
 }
 
-@import "footer-menu";
+.menu-social-container{
+	ul{
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+
+		a{
+			display: block;
+			padding: .5em 1em;
+			color: #fff;
+			text-decoration: none;
+
+			&:hover,
+				&:focus{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
