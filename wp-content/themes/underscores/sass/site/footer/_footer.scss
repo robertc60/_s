@@ -1,0 +1,12 @@
+.site-footer{
+	position: relative;
+	padding: 1em;
+	font-family: $font__sans;
+	color: #fff;
+	background-color: $color__skin;
+	display: flex;
+
+
+}
+
+@import "footer-menu";

@@ -11,19 +11,20 @@
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscores' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'underscores' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores' ), 'underscores', '<a href="https://mor10.com/courses" rel="designer">Morten Rand-Hendriksen</a>' ); ?>
-		</div><!-- .site-info -->
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'underscores' ); ?></button>
-            <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
-        </nav><!-- #site-navigation -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+        <a href="<?php echo esc_url(__('https://wordpress.org/', 'underscores')); ?>"><?php printf(esc_html__('Proudly powered by %s', 'underscores'), 'WordPress'); ?></a>
+        <span class="sep"> | </span>
+        <?php printf(esc_html__('Theme: %1$s by %2$s.', 'underscores'), 'underscores', '<a href="https://mor10.com/courses" rel="designer">Robert Clarkson</a>'); ?>
+    </div><!-- .site-info -->
+    <nav id="site-navigation" class="footer-navigation" role="navigation">
+        <button class="menu-toggle" aria-controls="primary-menu"
+                aria-expanded="false"><?php esc_html_e('Menu', 'underscores'); ?></button>
+        <?php wp_nav_menu(array('theme_location' => 'footer', 'menu_id' => 'footer-menu')); ?>
+    </nav><!-- #site-navigation -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
