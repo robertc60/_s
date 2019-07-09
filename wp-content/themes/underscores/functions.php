@@ -44,7 +44,8 @@ function underscores_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Header', 'underscores' ),
+		'primary' => esc_html__( 'primary', 'underscores' ),
+        'footer' => esc_html__('footer', 'underscores'),
 	) );
 
 	/*
@@ -64,14 +65,14 @@ function underscores_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
-
-
-	// Add theme support for custom logo
-    add_theme_support('custom-logo', array(
-        'width' => 90,
-        'height' => 90,
-        'flex-width' => true,
-    ));
+	
+	// Add theme support for Custom Logo
+	add_theme_support( 'custom-logo', array(
+		'width' => 90,
+		'height' => 90,
+		'flex-width' => true,
+	));
+	
 }
 endif;
 add_action( 'after_setup_theme', 'underscores_setup' );
@@ -94,11 +95,11 @@ function underscores_fonts_url() {
 	$font_families = array();
 	
 	if ( 'off' !== $source_sans_pro ) {
-		$font_families[] = 'Montserrat:400,400i';
+		$font_families[] = 'Raleway:400,400i,500';
 	}
 	
 	if ( 'off' !== $pt_serif ) {
-		$font_families[] = 'Raleway:400,400i,600';
+		$font_families[] = 'Montserrat:400,400i';
 	}
 	
 	
@@ -175,7 +176,11 @@ function underscores_scripts() {
 	
 	wp_enqueue_style( 'underscores-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'underscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'underscores-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script( 'underscores-navigation', 'underscoresScreenReaderText', array(
+		'expand' => __( 'Expand child menu', 'underscores'),
+		'collapse' => __( 'Collapse child menu', 'underscores'),
+	));
 
 	wp_enqueue_script( 'underscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
