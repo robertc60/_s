@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" uploadOnCheckin="d8a1b0d6-0441-4d8e-8b1d-3f5ade078906">
     <serverData>
       <paths name="roswebserver">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="roswebserver" />
   </component>
 </project>
