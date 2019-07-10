@@ -1,4 +1,4 @@
-.site-footer{
+.site-footer {
 	position: relative;
 	padding: 1em;
 	font-family: $font__sans;
@@ -32,3 +32,24 @@
 	}
 }
 
+
+
+.menu-social-container{
+	ul{
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+
+		a{
+			display: block;
+			padding: .5em 1em;
+			color: white;
+			text-decoration: none;
+
+			&:hover,
+				&:focus{
+					text-decoration: underline;
+			}
+		}
+	}
+}
